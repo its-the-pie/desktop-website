@@ -21,7 +21,7 @@ function Clock() {
     
     // return the component
     return (
-        <div className={'flex flex-col w-max p-1.5'}>
+        <div className={'flex flex-col w-fit p-1.5'}>
             <p className='time_style text-sm'>{formattedTime}</p>
             <p className='date_style text-sm'>{formattedDate}</p>
         </div>

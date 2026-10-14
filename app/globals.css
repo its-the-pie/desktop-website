@@ -57,7 +57,7 @@ body {
 }
 
 .date_style {
-  max-width: 9ch;
+  max-width: 10ch;
   white-space: nowrap;
   overflow: hidden;
 }

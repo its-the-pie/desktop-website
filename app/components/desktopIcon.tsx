@@ -2,7 +2,7 @@
 import { ReactNode, useState, useRef } from 'react';
 import Draggable from 'react-draggable';
 
-const Icon = ({children, imageURL, i, setWidth}: {
+const DesktopIcon = ({children, imageURL, i, setWidth}: {
     children: ReactNode
     imageURL: string
     i: string
@@ -17,15 +17,13 @@ const Icon = ({children, imageURL, i, setWidth}: {
 
         // if (icon != null) {
         //     console.log(icon.style.visibility)
+            // if (icon.style.visibility == "visible") {
+            //     icon.style.visibility = "hidden"
+            // } else if (icon.style?.visibility == "hidden") {
+            //     icon.style.visibility = "visible"
+            // }
         // } else {
         //     console.log("booooo")
-        // }
-
-        // if (icon.style.visibility == "visible") {
-        //     console.log("vis")
-        //     iconStyle.visibility = "hidden"
-        // } else if (iconStyle?.visibility == "hidden") {
-        //     iconStyle.visibility = "visible"
         // }
     }
 
@@ -40,9 +38,7 @@ const Icon = ({children, imageURL, i, setWidth}: {
                 </div>
             </div>
         </Draggable>
-        
-        
     )
 }
 
-export default Icon;
+export default DesktopIcon;
