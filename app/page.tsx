@@ -45,8 +45,11 @@ export default function Home() {
           </DesktopIcon>
         </div>
       </main>
-      <Tab>
-        hi
+      <Tab i="files">
+        files
+      </Tab>
+      <Tab i="notes">
+        notes
       </Tab>
 
       <div className="footer flex flex-row p-2.5">

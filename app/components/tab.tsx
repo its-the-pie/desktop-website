@@ -1,17 +1,23 @@
 'use client'
 
-import {ReactNode} from 'react';
+import {ReactNode, useState} from 'react';
 import React, { useRef } from 'react';
 import Draggable from "react-draggable";
 
+import MenuIcon from './menuIcon';
+import DesktopIcon from './desktopIcon';
 
 
-const Tab = ({children}: {
+const Tab = ({children, i}: {
     children: ReactNode
+    i : string
 }) => {
     const nodeRef = useRef(null);
+    const [closeMe, setCloseMe] = useState(true);
     function close() {
-        
+        const tab = document.getElementById(i)
+        tab? tab.style.display = "none" : ""
+        console.log(tab?.style.display)
     }
 
     function diminish() {
@@ -23,8 +29,9 @@ const Tab = ({children}: {
     }
 
     return (
+        <div className='hidden' id={i} ref={nodeRef} >
             <Draggable nodeRef={nodeRef}>
-                <div ref={nodeRef} className='tab_box absolute z-500 content-center text-center w-150 h-100 rounded-xl text-black text-2xl bg-white'>
+                <div className='tab_box absolute z-500 content-center text-center w-150 h-100 rounded-xl text-black text-2xl bg-white'>
                     <div className='absolute top-0 w-full h-10 bg-gray-400 flex flex-row gap-7'>
                         <div className='flex flex-row p-3 gap-1'>
                             <button className='rounded-3xl w-4 h-4 bg-red-500 text-xs' onClick={close}>x</button>
@@ -37,6 +44,8 @@ const Tab = ({children}: {
                     {children}
                 </div>
             </Draggable>
+        </div>
+            
     )
 }
 
