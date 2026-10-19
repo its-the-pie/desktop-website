@@ -13,11 +13,25 @@ const Tab = ({children, i}: {
     i : string
 }) => {
     const nodeRef = useRef(null);
-    const [closeMe, setCloseMe] = useState(true);
+
+    function clicked() {
+        // Source - https://stackoverflow.com/a/59341431
+// Posted by CertainPerformance, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-10-19, License - CC BY-SA 4.0
+
+        const test = document.querySelectorAll<HTMLElement>('.tab');
+        test.forEach(function(node) {
+            if (node == document.getElementById(i)) {
+                node.style.zIndex = "100";
+            } else {
+                node.style.zIndex = "50";
+            }
+        })
+    }
+
     function close() {
         const tab = document.getElementById(i)
         tab? tab.style.display = "none" : ""
-        console.log(tab?.style.display)
     }
 
     function diminish() {
@@ -29,9 +43,9 @@ const Tab = ({children, i}: {
     }
 
     return (
-        <div className='hidden' id={i} ref={nodeRef} >
+        <div className='tab hidden z-50' id={i} ref={nodeRef} onClick={clicked}>
             <Draggable nodeRef={nodeRef}>
-                <div className='tab_box absolute z-500 content-center text-center w-150 h-100 rounded-xl text-black text-2xl bg-white'>
+                <div className='tab_box absolute content-center text-center w-150 h-100 rounded-xl text-black text-2xl bg-white'>
                     <div className='absolute top-0 w-full h-10 bg-gray-400 flex flex-row gap-7'>
                         <div className='flex flex-row p-3 gap-1'>
                             <button className='rounded-3xl w-4 h-4 bg-red-500 text-xs' onClick={close}>x</button>

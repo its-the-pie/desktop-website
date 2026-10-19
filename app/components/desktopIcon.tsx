@@ -14,6 +14,17 @@ const DesktopIcon = ({children, imageURL, i, setWidth}: {
     function handleClick() {
         const tab = document.getElementById(i)
         tab? tab.style.display = "flex" : "hidden"
+        const test = document.querySelectorAll<HTMLElement>('.tab');
+        test.forEach(function(node) {
+            console.log(node)
+            console.log(document.getElementById(i))
+            if (node == document.getElementById(i)) {
+                console.log("match")
+                node.style.zIndex = "100";
+            } else {
+                node.style.zIndex = "50";
+            }
+        })
     }
 
     return (

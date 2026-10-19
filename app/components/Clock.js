@@ -16,8 +16,8 @@ function Clock() {
     }, []) // the [] are an empty dependency array; this allows the effect to only run once on mount
 
     // formatting
-    const formattedTime = currentTime.toLocaleTimeString();
-    const formattedDate = currentTime.toDateString()
+    const formattedTime = currentTime.toLocaleTimeString().slice(0,8);
+    const formattedDate = currentTime.toDateString().slice(0,10);
     
     // return the component
     return (

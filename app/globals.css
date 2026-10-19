@@ -33,7 +33,7 @@ body {
 }
 
 .footer {
-  z-index: 100;
+  z-index: 40;
   position: fixed;
   display: flex;
   background-color: rgb(103, 97, 97, .7);
@@ -57,14 +57,13 @@ body {
 }
 
 .date_style {
-  max-width: 10ch;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .tab_style {
   position: absolute;
-  z-index: 1000000;
+  z-index: 50;
 
   align-content: center;
   text-align: center;
