@@ -61,18 +61,10 @@ body {
   overflow: hidden;
 }
 
-.tab_style {
-  position: absolute;
-  z-index: 50;
+.tab_box {
+  display: none;
+}
 
-  align-content: center;
-  text-align: center;
-
-  width: 650;
-  height: 500;
-  border-radius: 10;
-
-  color: rgb(0, 0, 0);
-  font-size: xx-large;
-  background-color:  rgb(255, 255, 255);
+#intro {
+  display: block; 
 }

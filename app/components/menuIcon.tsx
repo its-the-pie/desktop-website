@@ -11,24 +11,24 @@ const MenuIcon = ({children, imageURL, i, setWidth}: {
     const nodeRef = useRef(null);
 
     function handleClick() {
-        // console.log(i)
-        // let icon = document.getElementById(i);
-
-        // if (icon != null) {
-        //     console.log(icon.style.visibility)
-            // if (icon.style.visibility == "visible") {
-            //     icon.style.visibility = "hidden"
-            // } else if (icon.style?.visibility == "hidden") {
-            //     icon.style.visibility = "visible"
-            // }
-        // } else {
-        //     console.log("booooo")
-        // }
+        const tab = document.getElementById(i)
+        tab? tab.style.display = "flex" : "hidden"
+        const test = document.querySelectorAll<HTMLElement>('.tab');
+        test.forEach(function(node) {
+            console.log(node)
+            console.log(document.getElementById(i))
+            if (node == document.getElementById(i)) {
+                console.log("match")
+                node.style.zIndex = "100";
+            } else {
+                node.style.zIndex = "50";
+            }
+        })
     }
 
     return (
         <div>
-            <div className=' z-50 content-center text-center '>
+            <div className='z-50 content-center text-center '>
                 <div id={i} className=' w-12 h-12 max-w-12 max-h-12 rounded-md'>
                     <button onClick={handleClick}>
                         <img src={imageURL} width={setWidth} className=' pointer-events-none'/>

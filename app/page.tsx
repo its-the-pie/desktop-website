@@ -31,10 +31,10 @@ export default function Home() {
           <DesktopIcon imageURL={"/white-doc.svg"} i={"skills"} setWidth="48">
             Skills
           </DesktopIcon>
-          <DesktopIcon imageURL={"/white-doc.svg"} i={"exp"} setWidth="48">
-            <p>Experience</p>
+          <DesktopIcon imageURL={"/white-doc.svg"} i={"experience"} setWidth="48">
+            Experience
           </DesktopIcon>
-          <DesktopIcon imageURL={"/white-res.svg"} i={"res"} setWidth="48">
+          <DesktopIcon imageURL={"/white-res.svg"} i={"resume"} setWidth="48">
             Resume
           </DesktopIcon>
           <DesktopIcon imageURL={"/white-photo.svg"} i={"bakes"} setWidth="48">
@@ -45,28 +45,59 @@ export default function Home() {
           </DesktopIcon>
         </div>
       </main>
+
+      <Tab i="intro">
+        <div>
+          <h1>Intro</h1>
+          <p className="text-sm">Hello</p>
+        </div>
+      </Tab>
+
       <Tab i="files">
-        files
+        <div>
+          <h1>Files</h1>
+          <p className="text-sm">Hello</p>
+        </div>
       </Tab>
       <Tab i="notes">
         notes
       </Tab>
+      <Tab i="about">
+        about
+      </Tab>
+      <Tab i="skills">
+        skills
+      </Tab>
+      <Tab i="experience">
+        experience
+      </Tab>
+      <Tab i="resume">
+        resume
+      </Tab>
+      <Tab i="bakes">
+        bakes
+      </Tab>
+      <Tab i="photos">
+        photos
+      </Tab>
 
       <div className="footer flex flex-row p-2.5">
         <div className="flex flex-row gap-8 left-0 w-full app-box items-center text-sm">
-          <MenuIcon imageURL={"/globe.svg"} i={"hello"} setWidth="36">
-            Hello
+          <MenuIcon imageURL={"/message.svg"} i={"intro"} setWidth="36">
+            Intro
           </MenuIcon>
-          <MenuIcon imageURL={"/globe.svg"} i={"hello"} setWidth="36">
-            Hello
+          <MenuIcon imageURL={"/white-doc.svg"} i={"about"} setWidth="36">
+            About
           </MenuIcon>
-          <MenuIcon imageURL={"/globe.svg"} i={"hello"} setWidth="36">
-            Hello
+          <MenuIcon imageURL={"/white-doc.svg"} i={"skills"} setWidth="36">
+            Skills
           </MenuIcon>
-          <MenuIcon imageURL={"/globe.svg"} i={"hello"} setWidth="36">
-            Hello
+          <MenuIcon imageURL={"/white-doc.svg"} i={"experience"} setWidth="36">
+            Experience
           </MenuIcon>
-
+          <MenuIcon imageURL={"/white-res.svg"} i={"resume"} setWidth="36">
+            Resume
+          </MenuIcon>
         </div>
         
         <div className="flex flex-row items-end">
