@@ -25,6 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+p {
+  font-size: small;
+}
+
 .full-app {
   display: flex;
   flex-direction: column;
@@ -63,8 +67,4 @@ body {
 
 .tab_box {
   display: none;
-}
-
-#intro {
-  display: block; 
 }

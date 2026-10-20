@@ -4,11 +4,15 @@ import {ReactNode, useState} from 'react';
 import React, { useRef } from 'react';
 import Draggable from "react-draggable";
 
-const Tab = ({children, i}: {
+const Tab = ({children, i, className}: {
     children: ReactNode
     i : string
+    className : string
 }) => {
     const nodeRef = useRef(null);
+
+    // Generalized style for all tab elements
+    className += " top-1/4 right-1/4 absolute w-150 h-100 rounded-xl text-xl shadow-black shadow-2xl"
 
     function clicked() {
         // Source - https://stackoverflow.com/a/59341431
@@ -39,9 +43,9 @@ const Tab = ({children, i}: {
     }
 
     return (
-        <div className='hidden z-50' id={i} ref={nodeRef} onClick={clicked}>
+        <div className='tab hidden z-50' id={i} ref={nodeRef} onClick={clicked}>
             <Draggable nodeRef={nodeRef}>
-                <div className='top-1/4 right-1/4 absolute content-center text-center w-150 h-100 rounded-xl text-black text-xl bg-white shadow-black shadow-2xl'>
+                <div className={className}>
                     <div className='absolute top-0 w-full h-10 bg-gray-400 flex flex-row gap-7'>
                         <div className='flex flex-row p-3 gap-1'>
                             <button className='rounded-3xl w-4 h-4 bg-red-500 text-xs' onClick={close}>x</button>

@@ -29,7 +29,7 @@ const DesktopIcon = ({children, imageURL, i, setWidth}: {
 
     return (
         <Draggable nodeRef={nodeRef}>
-            <div ref={nodeRef} className=' z-50 content-center text-center '>
+            <div ref={nodeRef} className='z-10 content-center text-center '>
                 <div className=' w-12 h-12 max-w-12 max-h-12 rounded-md'>
                     <button onClick={handleClick}>
                         <img src={imageURL} width={setWidth} className=' pointer-events-none'/>

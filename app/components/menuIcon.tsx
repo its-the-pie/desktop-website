@@ -1,5 +1,6 @@
 'use client'
 import { ReactNode, useState, useRef } from 'react';
+import Popip from 'reactjs-popup';
 
 const MenuIcon = ({children, imageURL, i, setWidth}: {
     children: ReactNode
@@ -7,8 +8,7 @@ const MenuIcon = ({children, imageURL, i, setWidth}: {
     i: string
     setWidth: string
 }) => {
-    const [isOpen, setIsOpen] = useState(false)
-    const nodeRef = useRef(null);
+    const ref = useRef(null);
 
     function handleClick() {
         const tab = document.getElementById(i)
@@ -28,7 +28,7 @@ const MenuIcon = ({children, imageURL, i, setWidth}: {
 
     return (
         <div>
-            <div className='z-50 content-center text-center '>
+            <div className='z-40 content-center text-center '>
                 <div id={i} className=' w-12 h-12 max-w-12 max-h-12 rounded-md'>
                     <button onClick={handleClick}>
                         <img src={imageURL} width={setWidth} className=' pointer-events-none'/>

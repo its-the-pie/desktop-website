@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="bg-[url('/bg-def.png')] w-sreen h-screen bg-cover fixed w-full flex justify-center items-center">
-      <main className="sidebar z-100 flex flex-row gap-10 p-10 fixed left-0 top-0">
+      <main className="sidebar z-30 flex flex-row gap-10 p-10 fixed left-0 top-0">
         <div className="app-box flex flex-col gap-10 flex-wrap pb-10 h-160 items-center text-sm">
           <DesktopIcon imageURL={"/white-file.svg"} i={"files"} setWidth="48">
             Files
@@ -46,38 +46,55 @@ export default function Home() {
         </div>
       </main>
 
-      <Tab i="intro">
-        <div>
-          <h1>Intro</h1>
-          <p className="text-sm">Hello</p>
+      <Tab i="intro" className="text-black bg-white  block">
+        <div className="m-8 mt-16">
+          <h1>Hi there!</h1>
+          <br/>
+          <p className="text-sm">Thanks for checking out my website! It is still a work in progress, but feel free to click around and check it out...</p>
         </div>
       </Tab>
 
-      <Tab i="files">
+      <Tab i="files" className="text-blue-950 bg-blue-300 ">
         <div>
           <h1>Files</h1>
           <p className="text-sm">Hello</p>
         </div>
       </Tab>
-      <Tab i="notes">
+      <Tab i="notes" className="text-amber-950 bg-amber-200">
         notes
       </Tab>
-      <Tab i="about">
-        about
+      <Tab i="about" className="text-black bg-white ">
+        <div className="m-8 mt-16 flex gap-10">
+          <div className="content-center w-1/3">
+            <Image 
+              src="/profile.jpeg"
+              alt="Profile Picture"
+              width={200}
+              height={200}
+              className="rounded-sm"
+            />
+            <p className="text-xs">Look! It's me!</p>
+          </div>
+          <div className="w-2/3">
+            <h1>Hello!</h1>
+            <p className="">I'm Yasmin; a computer science and statistics student at the University of Vermont, in Burlington.</p>
+            <p className=""></p>
+          </div>
+        </div>
       </Tab>
-      <Tab i="skills">
+      <Tab i="skills" className="text-black bg-white ">
         skills
       </Tab>
-      <Tab i="experience">
+      <Tab i="experience" className="text-black bg-white ">
         experience
       </Tab>
-      <Tab i="resume">
+      <Tab i="resume" className="text-black bg-white ">
         resume
       </Tab>
-      <Tab i="bakes">
+      <Tab i="bakes" className="text-black bg-white ">
         bakes
       </Tab>
-      <Tab i="photos">
+      <Tab i="photos" className="text-black bg-white ">
         photos
       </Tab>
 
