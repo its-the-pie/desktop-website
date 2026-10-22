@@ -7,6 +7,7 @@ import Tab from "./components/tab"
 import React  from 'react';
 import Clock from '../app/components/Clock.js'
 import Draggable from "react-draggable";
+import Carousel from "./components/Carousel"
 
 export default function Home() {
   const time = new Date().toLocaleTimeString()
@@ -46,7 +47,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Tab i="intro" className="text-black bg-white  block">
+      <Tab i="intro" className="text-black bg-white block">
         <div className="m-8 mt-16">
           <h1>Hi there!</h1>
           <br/>
@@ -71,14 +72,24 @@ export default function Home() {
               alt="Profile Picture"
               width={200}
               height={200}
-              className="rounded-sm"
+              className="rounded-sm pointer-events-none"
             />
             <p className="text-xs">Look! It's me!</p>
           </div>
           <div className="w-2/3">
             <h1>Hello!</h1>
             <p className="">I'm Yasmin; a computer science and statistics student at the University of Vermont, in Burlington.</p>
-            <p className=""></p>
+            <p className="">When I'm not in class, you can find me:</p>
+            <div className="ml-10">
+              <Carousel className="" 
+              content={["Riding my bike on the Burlington bike path", 
+                "Starting a new programming project",
+                "Doing arts and crafts",
+                "Trying out a new dessert recipe",
+                "Serving tables at Daily Planet",
+                "Reading Carl Hiaasen" ]}></Carousel>
+            </div>
+            
           </div>
         </div>
       </Tab>

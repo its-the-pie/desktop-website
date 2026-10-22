@@ -26,7 +26,11 @@ body {
 }
 
 p {
-  font-size: small;
+  font-size: medium;
+}
+
+li {
+  font-size: medium;
 }
 
 .full-app {
