@@ -1,23 +1,23 @@
 'use client'
 
-import Image from "next/image";
-import DesktopIcon from "./components/desktopIcon";
-import MenuIcon from "./components/menuIcon";
-import Tab from "./components/tab"
-import React  from 'react';
-import Clock from '../app/components/Clock.js'
-import Draggable from "react-draggable";
 import Carousel from "./components/Carousel"
+import Clock from '../app/components/Clock.js'
+import DesktopIcon from "./components/desktopIcon";
+import Draggable from "react-draggable";
+import Image from "next/image";
+import MenuIcon from "./components/menuIcon";
+import { PDFViewer } from '@embedpdf/react-pdf-viewer'
+import React  from 'react';
+import Tab from "./components/tab"
+
 
 export default function Home() {
-  const time = new Date().toLocaleTimeString()
-  const date = new Date().toDateString()
   
-        //<div className='z-0 top-0 fixed w-full h-full flex justify-center items-center'>
-
-
   return (
     <div className="bg-[url('/bg-def.png')] w-sreen h-screen bg-cover fixed w-full flex justify-center items-center">
+      <div className="flex flex-row">
+        
+      </div>
       <main className="sidebar z-30 flex flex-row gap-10 p-10 fixed left-0 top-0">
         <div className="app-box flex flex-col gap-10 flex-wrap pb-10 h-160 items-center text-sm">
           <DesktopIcon imageURL={"/white-file.svg"} i={"files"} setWidth="48">
@@ -46,7 +46,6 @@ export default function Home() {
           </DesktopIcon>
         </div>
       </main>
-
       <Tab i="intro" className="text-black bg-white block">
         <div className="m-8 mt-16">
           <h1>Hi there!</h1>
@@ -54,7 +53,6 @@ export default function Home() {
           <p className="text-sm">Thanks for checking out my website! It is still a work in progress, but feel free to click around and check it out...</p>
         </div>
       </Tab>
-
       <Tab i="files" className="text-blue-950 bg-blue-300 ">
         <div>
           <h1>Files</h1>
@@ -100,7 +98,98 @@ export default function Home() {
         experience
       </Tab>
       <Tab i="resume" className="text-black bg-white ">
-        resume
+        <div className="m-12 h-8/10 overflow-scroll flex flex-row gap-10">
+          <div className="main-content w-2/3">
+            <h1 className="text-resHeading text-lg font-bold">Yasmin Farley</h1>
+        
+            <h6>Sophomore at the University of Vermont, majoring in 
+            Statistics and Computer Science.<br/>
+            Experience working in restaurants for over a year, serving, hosting, and supporting.
+            </h6> 
+            <br/>
+          
+            <div className="experience">
+              <h1 className="text-resSub text-lg font-bold">EXPERIENCE</h1>
+              <h1 className="text-base"><b>The Daily Planet</b>, Burlington — <i>Server, Host/Support</i></h1>
+              <h1 className="text-resHeading text-xs">MAY 2025 - PRESENT</h1>
+              <ul className={"text-sm list-disc list-inside ml-5 leading-5"}>
+                <li>Serving sections of up to ten tables.</li>
+                <li>Managing the seating of up to four sections (32 tables) while balancing customer satisfaction with restaurant, server, and kitchen capacity to create a pleasurable experience for all.</li>
+                <li>Familiarizing with the menu in order to provide educated and curated suggestions to cater to each customer's allergies, needs, and preferences.</li>
+                <li>Fostering connections by engaging customers in conversation, and offering local dining and activity suggestions.</li>
+              </ul>
+
+              <br/>
+              <h1 className="text-base"><b>Butter Bar and Kitchen</b>, Burlington — <i>Host/Support</i></h1>
+              <h1 className="text-resHeading text-sm">SEPTEMBER 2024 - MAY 2025</h1>
+              <ul className={"text-sm list-disc list-inside ml-5 leading-5"}>
+                <li>Managing the seating of tables while ensuring the best service quality and experience.</li>
+                <li>Taking calls, making reservations, handling takeout orders.</li>
+              </ul>
+
+              <br/>
+              <h1 className="text-base"><b>Step Out VT</b>, Burlington/Remote — <i>Website Manager & Developer</i></h1>
+              <h1 className="text-resHeading text-sm">AUGUST 2024 - PRESENT</h1>
+              <h6>Volunteering to maintain a local non-profit’s website;</h6>
+              <ul className={"text-sm list-disc list-inside ml-5 leading-5"}>
+                <li>Adding pages, dropdowns, and design elements.</li>
+                <li>Selecting and integrating a donation feature.</li>
+                <li>Aiding in web financial decisions .</li>
+              </ul>
+            </div>
+
+            <br/>
+            <div className="education">
+              <h1 className="text-resSub text-lg font-bold">EDUCATION</h1>
+
+              <h1 className="text-sm"><b>University of Vermont</b>,  Burlington VT — <i>Computer Science & Statistics</i></h1>
+              <h1 className="text-resHeading text-xs">SEPTEMBER 2025 - Expected, MAY 2029</h1>
+
+              <h1 className="text-sm"><b>Burlington High School</b>,  Burlington VT — <i>Computer Science & Statistics</i></h1>
+              <h1 className="text-resHeading text-xs">Class of 2025</h1>
+            </div>
+            
+          </div>
+          <div className="small-content w-1/3 text-xs">
+            <p><b>Contact:</b> 
+            <br/>(802) 734-9672
+            <br/>yasminmfarley@gmail.com
+            <br/>90 West Road, Burlington VT</p>
+
+            <br/>
+            <br/>
+            <br/>
+
+            <h1 className="text-resSub">SKILLS</h1>
+            <p>Fast learner
+            <br/>Team player
+            <br/>Good with kids
+            <br/>Work well in fast-paced environments
+            <br/>Building customer relationships
+            <br/>Point-of-Sale systems
+            </p>
+
+            <br/>
+            <h1 className="text-resSub text-bold">LANGUAGES</h1>
+            <p>English: Fluent
+            <br/>Portuguese: Fluent
+            <br/>Spanish: Basics
+            <br/>________________
+            </p>
+
+            <br/>
+            <h1 className="text-resHeading text-bold">INTERESTS & HOBBIES</h1>
+            <p className=" italic">Baking! (Especially cookies and breads)
+            <br/>Biking and walking out and about
+            <br/>Hiking the Green Mountains!
+            <br/>Reading
+            <br/>Web development 
+            <br/>Sewing and crocheting
+            </p>
+          </div>
+
+        </div>
+        
       </Tab>
       <Tab i="bakes" className="text-black bg-white ">
         bakes
