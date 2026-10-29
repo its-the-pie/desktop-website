@@ -1,18 +1,23 @@
 'use client'
 
 import {ReactNode, useState} from 'react';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Draggable from "react-draggable";
 
-const Tab = ({children, i, className}: {
+const Tab = ({children, i, className, show}: {
     children: ReactNode
     i : string
     className : string
+    show : string
 }) => {
     const nodeRef = useRef(null);
 
-    // Generalized style for all tab elements
-    className += " top-1/4 right-1/4 absolute w-150 h-100 rounded-xl text-xl shadow-black shadow-2xl"
+    // the area of a tab's content
+    const iSpace = i + "Space";
+    
+    // handle the size & size-styling of the tab
+    // const dimRef = useRef(false);
+    const [size, setSize] = useState(true);
 
     function clicked() {
         // Source - https://stackoverflow.com/a/59341431
@@ -35,17 +40,20 @@ const Tab = ({children, i, className}: {
     }
 
     function diminish() {
-        
-    }
+
+    }   
 
     function changeSize() {
-
+        setSize(!size);
     }
 
+    
+
     return (
-        <div className='tab hidden z-50' id={i} ref={nodeRef} onClick={clicked}>
-            <Draggable nodeRef={nodeRef}>
-                <div className={className}>
+        <div className={show + 'tab z-50' } id={i} onClick={clicked}>
+            <Draggable nodeRef={(nodeRef)} disabled={size ? false : true} bounds={'body'}>
+        
+                <div className={className + (size ? ' w-150 h-100' : ' w-full h-full ') + ' top-1/4 left-1/4 absolute rounded-xl text-xl shadow-black shadow-2xl'}  ref={nodeRef} >
                     <div className='absolute top-0 w-full h-10 bg-gray-400 flex flex-row gap-7'>
                         <div className='flex flex-row p-3 gap-1'>
                             <button className='rounded-3xl w-4 h-4 bg-red-500 text-xs' onClick={close}>x</button>

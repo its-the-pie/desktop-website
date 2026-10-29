@@ -46,23 +46,23 @@ export default function Home() {
           </DesktopIcon>
         </div>
       </main>
-      <Tab i="intro" className="text-black bg-white block">
+      <Tab i="intro" className="text-black bg-white " show=" block ">
         <div className="m-8 mt-16">
           <h1>Hi there!</h1>
           <br/>
           <p className="text-sm">Thanks for checking out my website! It is still a work in progress, but feel free to click around and check it out...</p>
         </div>
       </Tab>
-      <Tab i="files" className="text-blue-950 bg-blue-300 ">
+      <Tab i="files" className="text-blue-950 bg-blue-300 " show=" hidden ">
         <div>
           <h1>Files</h1>
           <p className="text-sm">Hello</p>
         </div>
       </Tab>
-      <Tab i="notes" className="text-amber-950 bg-amber-200">
+      <Tab i="notes" className="text-amber-950 bg-amber-200 " show=" hidden ">
         notes
       </Tab>
-      <Tab i="about" className="text-black bg-white ">
+      <Tab i="about" className="text-black bg-white " show=" hidden ">
         <div className="m-8 mt-16 flex gap-10">
           <div className="content-center w-1/3">
             <Image 
@@ -91,13 +91,13 @@ export default function Home() {
           </div>
         </div>
       </Tab>
-      <Tab i="skills" className="text-black bg-white ">
+      <Tab i="skills" className="text-black bg-white " show=" hidden ">
         skills
       </Tab>
-      <Tab i="experience" className="text-black bg-white ">
+      <Tab i="experience" className="text-black bg-white " show=" hidden ">
         experience
       </Tab>
-      <Tab i="resume" className="text-black bg-white ">
+      <Tab i="resume" className="text-black bg-white " show=" hidden ">
         <div className="m-12 h-8/10 overflow-scroll flex flex-row gap-10">
           <div className="main-content w-2/3">
             <h1 className="text-resHeading text-lg font-bold">Yasmin Farley</h1>
@@ -144,7 +144,7 @@ export default function Home() {
 
               <h1 className="text-sm"><b>University of Vermont</b>,  Burlington VT — <i>Computer Science & Statistics</i></h1>
               <h1 className="text-resHeading text-xs">SEPTEMBER 2025 - Expected, MAY 2029</h1>
-
+              <br/>
               <h1 className="text-sm"><b>Burlington High School</b>,  Burlington VT — <i>Computer Science & Statistics</i></h1>
               <h1 className="text-resHeading text-xs">Class of 2025</h1>
             </div>
@@ -191,10 +191,10 @@ export default function Home() {
         </div>
         
       </Tab>
-      <Tab i="bakes" className="text-black bg-white ">
+      <Tab i="bakes" className="text-black bg-white " show=" hidden ">
         bakes
       </Tab>
-      <Tab i="photos" className="text-black bg-white ">
+      <Tab i="photos" className="text-black bg-white " show=" hidden ">
         photos
       </Tab>
 

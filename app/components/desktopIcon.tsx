@@ -1,7 +1,6 @@
 'use client'
 import { ReactNode, useState, useRef } from 'react';
 import Draggable from 'react-draggable';
-import Tab from './tab';
 
 const DesktopIcon = ({children, imageURL, i, setWidth}: {
     children: ReactNode
@@ -14,6 +13,7 @@ const DesktopIcon = ({children, imageURL, i, setWidth}: {
     function handleClick() {
         const tab = document.getElementById(i)
         tab? tab.style.display = "flex" : "hidden"
+
         const test = document.querySelectorAll<HTMLElement>('.tab');
         test.forEach(function(node) {
             console.log(node)
