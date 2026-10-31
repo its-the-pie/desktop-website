@@ -12,9 +12,8 @@ const Tab = ({children, i, className, show}: {
 }) => {
     const nodeRef = useRef(null);
 
-    // the area of a tab's content
-    const iSpace = i + "Space";
-    
+    const [position, setPosition] = useState([0,0])
+
     // handle the size & size-styling of the tab
     // const dimRef = useRef(false);
     const [size, setSize] = useState(true);
@@ -37,10 +36,16 @@ const Tab = ({children, i, className, show}: {
     function close() {
         const tab = document.getElementById(i)
         tab? tab.style.display = "none" : ""
+        const icon = document.getElementById(i + "Menu")
+        icon? icon.classList.remove("bg-blue-300") : ""
     }
 
     function diminish() {
-
+        const tab = document.getElementById(i)
+        tab? tab.style.display = "none" : ""
+        console.log(document.getElementById(i+"Menu"))
+        const icon = document.getElementById(i + "Menu")
+        icon? icon.classList.add("bg-blue-300") : ""
     }   
 
     function changeSize() {
@@ -51,9 +56,14 @@ const Tab = ({children, i, className, show}: {
 
     return (
         <div className={show + 'tab z-50' } id={i} onClick={clicked}>
-            <Draggable nodeRef={(nodeRef)} disabled={size ? false : true} bounds={'body'}>
+            <Draggable nodeRef={(nodeRef)} position={ size ? {
+                x: position[0],
+                y: position[1]
+            } : {x: 0, y: 0}} disabled={size ? false : true} bounds={'body'} onDrag={(e, data)=>{
+                size ? setPosition([data.x, data.y]) : setPosition([0, 0])
+            }}>
         
-                <div className={className + (size ? ' w-150 h-100' : ' w-full h-full ') + ' top-1/4 left-1/4 absolute rounded-xl text-xl shadow-black shadow-2xl'}  ref={nodeRef} >
+                <div className={className + (size ? ' w-150 h-100' : ' w-full h-full ') + ' absolute rounded-xl text-xl shadow-black shadow-2xl'}  ref={nodeRef} >
                     <div className='absolute top-0 w-full h-10 bg-gray-400 flex flex-row gap-7'>
                         <div className='flex flex-row p-3 gap-1'>
                             <button className='rounded-3xl w-4 h-4 bg-red-500 text-xs' onClick={close}>x</button>

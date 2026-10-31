@@ -14,12 +14,12 @@ const DesktopIcon = ({children, imageURL, i, setWidth}: {
         const tab = document.getElementById(i)
         tab? tab.style.display = "flex" : "hidden"
 
+        const icon = document.getElementById(i + "Menu")
+        icon? icon.classList.remove("bg-blue-300") : ""
+
         const test = document.querySelectorAll<HTMLElement>('.tab');
         test.forEach(function(node) {
-            console.log(node)
-            console.log(document.getElementById(i))
             if (node == document.getElementById(i)) {
-                console.log("match")
                 node.style.zIndex = "100";
             } else {
                 node.style.zIndex = "50";
@@ -29,7 +29,7 @@ const DesktopIcon = ({children, imageURL, i, setWidth}: {
 
     return (
         <Draggable nodeRef={nodeRef}>
-            <div ref={nodeRef} className='z-10 content-center text-center '>
+            <div ref={nodeRef} className='z-10 content-center text-center'>
                 <div className=' w-12 h-12 max-w-12 max-h-12 rounded-md'>
                     <button onDoubleClick={handleClick}>
                         <img src={imageURL} width={setWidth} className=' pointer-events-none'/>
