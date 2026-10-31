@@ -46,7 +46,7 @@ export default function Home() {
           </DesktopIcon>
         </div>
       </main>
-      <Tab i="intro" className="text-black bg-white " show=" block ">
+      <Tab i="intro" className="text-black bg-white " show=" flex ">
         <div className="m-8 mt-16">
           <h1>Hi there!</h1>
           <br/>
