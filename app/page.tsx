@@ -1,22 +1,23 @@
 'use client'
 
 import Carousel from "./components/Carousel"
-import Clock from '../app/components/Clock.js'
+import Clock from './components/Clock.js'
 import DesktopIcon from "./components/desktopIcon";
 import Draggable from "react-draggable";
 import Image from "next/image";
+import ImageCarousel from "./components/imageCarousel";
 import MenuIcon from "./components/menuIcon";
 import { PDFViewer } from '@embedpdf/react-pdf-viewer'
-import React  from 'react';
+import React from 'react';
 import Tab from "./components/tab"
 
 
 export default function Home() {
-  
+
   return (
     <div className="bg-[url('/bg-def.png')] w-sreen h-screen bg-cover fixed w-full flex justify-center items-center">
       <div className="flex flex-row">
-        
+
       </div>
       <main className="sidebar z-30 flex flex-row gap-10 p-10 fixed left-0 top-0">
         <div className="app-box flex flex-col gap-10 flex-wrap pb-10 h-160 items-center text-sm">
@@ -49,7 +50,7 @@ export default function Home() {
       <Tab i="intro" className="text-black bg-white " show=" flex ">
         <div className="m-8 mt-16">
           <h1>Hi there!</h1>
-          <br/>
+          <br />
           <p className="text-sm">Thanks for checking out my website! It is still a work in progress, but feel free to click around and check it out...</p>
         </div>
       </Tab>
@@ -65,7 +66,7 @@ export default function Home() {
       <Tab i="about" className="text-black bg-white " show=" hidden ">
         <div className="m-8 mt-16 flex gap-10">
           <div className="content-center w-1/3">
-            <Image 
+            <Image
               src="/profile.jpeg"
               alt="Profile Picture"
               width={200}
@@ -79,15 +80,15 @@ export default function Home() {
             <p className="">I'm Yasmin; a computer science and statistics student at the University of Vermont, in Burlington.</p>
             <p className="">When I'm not in class, you can find me:</p>
             <div className="ml-10">
-              <Carousel className="" 
-              content={["Riding my bike on the Burlington bike path", 
-                "Starting a new programming project",
-                "Doing arts and crafts",
-                "Trying out a new dessert recipe",
-                "Serving tables at Daily Planet",
-                "Reading Carl Hiaasen" ]}></Carousel>
+              <Carousel className=""
+                content={["Riding my bike on the Burlington bike path",
+                  "Starting a new programming project",
+                  "Doing arts and crafts",
+                  "Trying out a new dessert recipe",
+                  "Serving tables at Daily Planet",
+                  "Reading Carl Hiaasen"]}></Carousel>
             </div>
-            
+
           </div>
         </div>
       </Tab>
@@ -101,13 +102,13 @@ export default function Home() {
         <div className="m-12 h-8/10 overflow-scroll flex flex-row gap-10">
           <div className="main-content w-2/3">
             <h1 className="text-resHeading text-lg font-bold">Yasmin Farley</h1>
-        
-            <h6>Sophomore at the University of Vermont, majoring in 
-            Statistics and Computer Science.<br/>
-            Experience working in restaurants for over a year, serving, hosting, and supporting.
-            </h6> 
-            <br/>
-          
+
+            <h6>Sophomore at the University of Vermont, majoring in
+              Statistics and Computer Science.<br />
+              Experience working in restaurants for over a year, serving, hosting, and supporting.
+            </h6>
+            <br />
+
             <div className="experience">
               <h1 className="text-resSub text-lg font-bold">EXPERIENCE</h1>
               <h1 className="text-base"><b>The Daily Planet</b>, Burlington — <i>Server, Host/Support</i></h1>
@@ -119,7 +120,7 @@ export default function Home() {
                 <li>Fostering connections by engaging customers in conversation, and offering local dining and activity suggestions.</li>
               </ul>
 
-              <br/>
+              <br />
               <h1 className="text-base"><b>Butter Bar and Kitchen</b>, Burlington — <i>Host/Support</i></h1>
               <h1 className="text-resHeading text-sm">SEPTEMBER 2024 - MAY 2025</h1>
               <ul className={"text-sm list-disc list-inside ml-5 leading-5"}>
@@ -127,7 +128,7 @@ export default function Home() {
                 <li>Taking calls, making reservations, handling takeout orders.</li>
               </ul>
 
-              <br/>
+              <br />
               <h1 className="text-base"><b>Step Out VT</b>, Burlington/Remote — <i>Website Manager & Developer</i></h1>
               <h1 className="text-resHeading text-sm">AUGUST 2024 - PRESENT</h1>
               <h6>Volunteering to maintain a local non-profit’s website;</h6>
@@ -138,64 +139,64 @@ export default function Home() {
               </ul>
             </div>
 
-            <br/>
+            <br />
             <div className="education">
               <h1 className="text-resSub text-lg font-bold">EDUCATION</h1>
 
               <h1 className="text-sm"><b>University of Vermont</b>,  Burlington VT — <i>Computer Science & Statistics</i></h1>
               <h1 className="text-resHeading text-xs">SEPTEMBER 2025 - Expected, MAY 2029</h1>
-              <br/>
+              <br />
               <h1 className="text-sm"><b>Burlington High School</b>,  Burlington VT — <i>Computer Science & Statistics</i></h1>
               <h1 className="text-resHeading text-xs">Class of 2025</h1>
             </div>
-            
+
           </div>
           <div className="small-content w-1/3 text-xs">
-            <p><b>Contact:</b> 
-            <br/>(802) 734-9672
-            <br/>yasminmfarley@gmail.com
-            <br/>90 West Road, Burlington VT</p>
+            <p><b>Contact:</b>
+              <br />(802) 734-9672
+              <br />yasminmfarley@gmail.com
+              <br />90 West Road, Burlington VT</p>
 
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
 
             <h1 className="text-resSub">SKILLS</h1>
             <p>Fast learner
-            <br/>Team player
-            <br/>Good with kids
-            <br/>Work well in fast-paced environments
-            <br/>Building customer relationships
-            <br/>Point-of-Sale systems
+              <br />Team player
+              <br />Good with kids
+              <br />Work well in fast-paced environments
+              <br />Building customer relationships
+              <br />Point-of-Sale systems
             </p>
 
-            <br/>
+            <br />
             <h1 className="text-resSub text-bold">LANGUAGES</h1>
             <p>English: Fluent
-            <br/>Portuguese: Fluent
-            <br/>Spanish: Basics
-            <br/>________________
+              <br />Portuguese: Fluent
+              <br />Spanish: Basics
+              <br />________________
             </p>
 
-            <br/>
+            <br />
             <h1 className="text-resHeading text-bold">INTERESTS & HOBBIES</h1>
             <p className=" italic">Baking! (Especially cookies and breads)
-            <br/>Biking and walking out and about
-            <br/>Hiking the Green Mountains!
-            <br/>Reading
-            <br/>Web development 
-            <br/>Sewing and crocheting
+              <br />Biking and walking out and about
+              <br />Hiking the Green Mountains!
+              <br />Reading
+              <br />Web development
+              <br />Sewing and crocheting
             </p>
           </div>
 
         </div>
-        
+
       </Tab>
-      <Tab i="bakes" className="text-black bg-white " show=" hidden ">
-        bakes
+      <Tab i="bakes" className="text-black bg-white " show=" hidden">
+        <ImageCarousel className="" src={["/aebleskivers.jpeg", "/bolo-de-rolo.jpeg", "/bolo-de-rolo2.jpeg", "/burgermeister.jpeg", "/challah.jpeg", "/charlotte-cake.jpeg", "/chocolate-cake.jpeg", "/cocoa-coconut-tart.jpeg", "/coconut-tiramisu-cake.jpeg", "/cookie-cake.jpeg", "/cookie-dough-cake.jpeg", "/french-toast.jpeg", "/monster-cookies.jpeg", "/opera-cake.jpeg", "/orange-cake.jpeg", "/smore's-cookies.jpeg", "/tiramisu-cupcakes.jpeg"]} name={["Aebslesivers", "Guava Bolo de Rolo", "Cherry Bolo de Rolo", "\"Burgermeister\" Cupcakes", "Challah-Style French Toast Bread", "Vegan Raspberry Charlotte Cake", "Chocolate Cake", "Chocolate Coconut Date Tart", "Coconut Tiramisu Cake", "Cookie Dough Cake", "Cookie Dough Cake", "French Toast", "Monster Cookies", "Opera Cake", "Orange Cake", "Smore's Cookies", "Tiramisu Cupcakes"]}></ImageCarousel>
       </Tab>
       <Tab i="photos" className="text-black bg-white " show=" hidden ">
-        photos
+        <></>
       </Tab>
 
       <div className="footer flex flex-row p-2.5">
@@ -216,11 +217,11 @@ export default function Home() {
             Resume
           </MenuIcon>
         </div>
-        
+
         <div className="flex flex-row items-end">
-          <Clock/>
+          <Clock />
         </div>
-        
+
       </div>
     </div>
   );
