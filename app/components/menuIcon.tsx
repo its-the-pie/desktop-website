@@ -1,6 +1,5 @@
 'use client'
 import { ReactNode, useState, useRef } from 'react';
-import Popip from 'reactjs-popup';
 
 const MenuIcon = ({children, imageURL, i, setWidth}: {
     children: ReactNode
