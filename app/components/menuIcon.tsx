@@ -12,11 +12,14 @@ const MenuIcon = ({children, imageURL, i, setWidth}: {
 
     function handleClick() {
         const tab = document.getElementById(i)
+        // if tab is valid, change the display
         tab? tab.style.display = "flex" : "hidden"
 
+        // update the dot that shos tab diminished/closed
         const icon = document.getElementById(i + "Menu")
         icon? icon.classList.remove("bg-blue-300") : ""
 
+        // set the z-index (layer) of every div to a low number, and then bring the clicked one to the front
         const test = document.querySelectorAll<HTMLElement>('.tab');
         test.forEach(function(node) {
             if (node == document.getElementById(i)) {
@@ -26,7 +29,7 @@ const MenuIcon = ({children, imageURL, i, setWidth}: {
             }
         })
     }
-
+    // return the div with the data
     return (
         <div>
             <div className='z-40 content-center text-center '>

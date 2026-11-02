@@ -5,9 +5,13 @@ import React, { useRef, useEffect } from 'react';
 import Draggable from "react-draggable";
 
 const Tab = ({children, i, className, show}: {
+    // content
     children: ReactNode
+    // id
     i : string
+    // styling for that specific tab
     className : string
+    // whether or not we show it on load
     show : string
 }) => {
     const nodeRef = useRef(null);
@@ -23,6 +27,7 @@ const Tab = ({children, i, className, show}: {
 // Posted by CertainPerformance, modified by community. See post 'Timeline' for change history
 // Retrieved 2026-10-19, License - CC BY-SA 4.0
 
+        // set the z-index (layer) of every div to a low number, and then bring the clicked one to the front
         const test = document.querySelectorAll<HTMLElement>('.tab');
         test.forEach(function(node) {
             if (node == document.getElementById(i)) {
@@ -33,29 +38,36 @@ const Tab = ({children, i, className, show}: {
         })
     }
 
+    // close the tab when the red button is clicked
     function close() {
         const tab = document.getElementById(i)
+        // set the display to not show the tab
         tab? tab.style.display = "none" : ""
         const icon = document.getElementById(i + "Menu")
+        // hide the blue dot that shows when tab is diminished
         icon? icon.classList.remove("bg-blue-300") : ""
         setSize(true)
     }
 
+    // this handles diminishing the tab
     function diminish() {
         const tab = document.getElementById(i)
+        // hide the tab
         tab? tab.style.display = "none" : ""
         console.log(document.getElementById(i+"Menu"))
         const icon = document.getElementById(i + "Menu")
+        // show the blue dot
         icon? icon.classList.add("bg-blue-300") : ""
     }   
 
+    // change the size
     function changeSize() {
+        // set the size to whatever it is not
         setSize(!size);
-        console.log(size)
     }
 
     
-
+    // return the tab div
     return (
         <div className={show + 'tab z-50' } id={i} onClick={clicked}>
             <Draggable nodeRef={(nodeRef)} disabled={size ? false : true} bounds={'body'}  position={size ? {x : position[0], y : position[1]} : {x : 0, y : 0} } onDrag={(e,data) => {

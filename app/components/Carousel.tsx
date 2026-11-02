@@ -2,7 +2,9 @@
 import {useState, useEffect} from 'react';
 
 const Carousel = ({className, content} : {
+    // style
     className : string;
+    // text string
     content : string[];
 }) => {
     className = className + ' flex flex-col max-w-full wrap-break-word p-1.5';

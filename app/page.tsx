@@ -1,5 +1,6 @@
 'use client'
 
+// imports (alphabetical)
 import Carousel from "./components/Carousel"
 import Clock from './components/Clock.js'
 import DesktopIcon from "./components/desktopIcon";
@@ -7,7 +8,6 @@ import Draggable from "react-draggable";
 import Image from "next/image";
 import ImageCarousel from "./components/imageCarousel";
 import MenuIcon from "./components/menuIcon";
-import { PDFViewer } from '@embedpdf/react-pdf-viewer'
 import React from 'react';
 import Tab from "./components/tab"
 
@@ -16,9 +16,6 @@ export default function Home() {
 
   return (
     <div className="bg-[url('/bg-def.png')] w-sreen h-screen bg-cover fixed w-full flex justify-center items-center">
-      <div className="flex flex-row">
-
-      </div>
       <main className="sidebar z-30 flex flex-row gap-10 p-10 fixed left-0 top-0">
         <div className="app-box flex flex-col gap-10 flex-wrap pb-10 h-160 items-center text-sm">
           <DesktopIcon imageURL={"/white-file.svg"} i={"files"} setWidth="48">
@@ -52,6 +49,11 @@ export default function Home() {
           <h1>Hi there!</h1>
           <br />
           <p className="text-sm">Thanks for checking out my website! It is still a work in progress, but feel free to click around and check it out...</p>
+          <br />
+          <p className="text-sm italic">The tabs with text are: about, resume, bakes.</p>
+          <p className="text-sm italic">All buttons and tabs are working.</p>
+          <p className="text-sm italic">Double click to open from a desktop icon, single click to open from a menu bar icon.</p>
+          <p className="text-sm italic">Desktop only; not yet integrated for smaller screen sizes.</p>
         </div>
       </Tab>
       <Tab i="files" className="text-blue-950 bg-blue-300 " show=" hidden ">
@@ -192,7 +194,7 @@ export default function Home() {
         </div>
 
       </Tab>
-      <Tab i="bakes" className="text-black bg-white " show=" hidden">
+      <Tab i="bakes" className="text-black bg-white " show=" hidden ">
         <ImageCarousel className="" src={["/aebleskivers.jpeg", "/bolo-de-rolo.jpeg", "/bolo-de-rolo2.jpeg", "/burgermeister.jpeg", "/challah.jpeg", "/charlotte-cake.jpeg", "/chocolate-cake.jpeg", "/cocoa-coconut-tart.jpeg", "/coconut-tiramisu-cake.jpeg", "/cookie-cake.jpeg", "/cookie-dough-cake.jpeg", "/french-toast.jpeg", "/monster-cookies.jpeg", "/opera-cake.jpeg", "/orange-cake.jpeg", "/smore's-cookies.jpeg", "/tiramisu-cupcakes.jpeg"]} name={["Aebslesivers", "Guava Bolo de Rolo", "Cherry Bolo de Rolo", "\"Burgermeister\" Cupcakes", "Challah-Style French Toast Bread", "Vegan Raspberry Charlotte Cake", "Chocolate Cake", "Chocolate Coconut Date Tart", "Coconut Tiramisu Cake", "Cookie Dough Cake", "Cookie Dough Cake", "French Toast", "Monster Cookies", "Opera Cake", "Orange Cake", "Smore's Cookies", "Tiramisu Cupcakes"]}></ImageCarousel>
       </Tab>
       <Tab i="photos" className="text-black bg-white " show=" hidden ">

@@ -3,8 +3,11 @@ import Image from "next/image";
 import {useState, useEffect} from 'react';
 
 const ImageCarousel = ({className, src, name} : {
+    // style
     className : string;
+    // image source
     src : string[];
+    // image name
     name : string[];
 }) => {
     var i = 0;

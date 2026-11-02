@@ -10,13 +10,17 @@ const DesktopIcon = ({children, imageURL, i, setWidth}: {
 }) => {
     const nodeRef = useRef(null);
 
+    // when clicked, show corresponding tab
     function handleClick() {
         const tab = document.getElementById(i)
+        // is tab valid? if so change the display
         tab? tab.style.display = "flex" : "hidden"
 
+        // control the dot that shows a tab has been diminished
         const icon = document.getElementById(i + "Menu")
         icon? icon.classList.remove("bg-blue-300") : ""
 
+        // set the z-index (layer) of every div to a low number, and then bring the clicked one to the front
         const test = document.querySelectorAll<HTMLElement>('.tab');
         test.forEach(function(node) {
             if (node == document.getElementById(i)) {
@@ -26,7 +30,7 @@ const DesktopIcon = ({children, imageURL, i, setWidth}: {
             }
         })
     }
-
+// this is where the div is formatted and returned, using the given tab data
     return (
         <Draggable nodeRef={nodeRef}>
             <div ref={nodeRef} className='z-10 content-center text-center'>
