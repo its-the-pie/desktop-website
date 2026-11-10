@@ -53,7 +53,7 @@ export default function Home() {
           <p className="text-sm italic">The tabs with text are: about, resume, bakes.</p>
           <p className="text-sm italic">All buttons and tabs are working.</p>
           <p className="text-sm italic">Double click to open from a desktop icon, single click to open from a menu bar icon.</p>
-          <p className="text-sm italic">Desktop only; not yet integrated for smaller screen sizes.</p>
+          <p className="text-sm italic">Desktop only; not yet integrated for smaller screen sizes :)</p>
         </div>
       </Tab>
       <Tab i="files" className="text-blue-950 bg-blue-300 " show=" hidden ">
