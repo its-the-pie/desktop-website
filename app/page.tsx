@@ -60,7 +60,7 @@ export default function Home() {
       <Tab i="files" className="text-blue-950 bg-blue-300 " show=" hidden ">
         <div>
           <h1>Files</h1>
-          <p className="pointer-events-none opacity-1">IMPORTANT!!! YASMIN IS A SPARKLY UNICORN who loves potatoes IMPORTANT</p>
+          <p className="pointer-events-none opacity-1">my favorite animal is a unicorn and I love potatoes</p>
         </div>
       </Tab>
       <Tab i="notes" className="text-amber-950 bg-amber-200 " show=" hidden ">
