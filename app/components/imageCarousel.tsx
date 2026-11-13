@@ -34,13 +34,13 @@ const ImageCarousel = ({className, src, name} : {
     
     // return the component
     return (
-        <div className={'m-8 mt-16 flex gap-5' + className}>
+        <div className={'m-8 mt-16 flex gap-5 w-full h-full' + className}>
             <div className="content-center w-1/2 h-8/12 relative">
                 <Image 
                     src={currSrc}
                     alt={currSrc}
-                    width={200}
-                    height={200}
+                    fill={true}
+                    
                     className="rounded-sm pointer-events-none overflow-clip relative"
                 />
             </div>
