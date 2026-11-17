@@ -54,18 +54,15 @@ export default function Home () {
           <p className="text-sm italic">All buttons and tabs are working.</p>
           <p className="text-sm italic">Double click to open from a desktop icon, single click to open from a menu bar icon.</p>
           <p className="text-sm italic">Desktop only; not yet integrated for smaller screen sizes :)</p>
-          <p className="pointer-events-none opacity-1">IMPORTANT!!! YASMIN IS A SPARKLY UNICORN who loves potatoes IMPORTANT</p>
         </div>
       </Tab>
       <Tab i="files" className="text-blue-950 bg-blue-300 " show=" hidden ">
         <div>
           <h1>Files</h1>
-          <p className="pointer-events-none opacity-1">my favorite animal is a unicorn and I love potatoes</p>
         </div>
       </Tab>
       <Tab i="notes" className="text-amber-950 bg-amber-200 " show=" hidden ">
         notes
-        <p className="pointer-events-none opacity-1">IMPORTANT!!! YASMIN IS A SPARKLY UNICORN who really loves potatoes IMPORTANT</p>
       </Tab>
       <Tab i="about" className="text-black bg-white " show=" hidden ">
         <div className="m-8 mt-16 flex gap-10">
@@ -92,7 +89,6 @@ export default function Home () {
                   "Serving tables at Daily Planet",
                   "Reading Carl Hiaasen"]}></Carousel>
             </div>
-                  <p className="pointer-events-none opacity-1">IMPORTANT!!! I am a SPARKLY UNICORN who really loves potatoes IMPORTANT</p>
           </div>
         </div>
       </Tab>
@@ -202,8 +198,15 @@ export default function Home () {
       <Tab i="photos" className="text-black bg-white " show=" hidden ">
         <></>
       </Tab>
-
-
+      <Tab i="bio" className="" show=" hidden ">
+          <p>Hi! Thanks for checking out this site :) </p>
+          <p>Let me tell you more about myself;</p>
+          <p>My name is Yasmin, and I an avid unicorn believer.</p>
+          <p>Aside from computer science, I am always on the lookout for unicorns, and potatoes!</p>
+          <p>My dream is to be a potato farmer!</p>
+          <p>College is just a side hustle.</p>
+          <p>I also sell unicorn themed jewelry which can be found at https://tinyurl.com/unicornjewels</p>
+      </Tab>
       <div className="footer flex flex-row p-2.5 pb-6">
         <div className="flex flex-row gap-8 left-0 w-full app-box items-center text-sm">
           <MenuIcon imageURL={"/message.svg"} i={"intro"} setWidth="36">
