@@ -39,9 +39,9 @@ const ImageCarousel = ({className, src, name} : {
                 <Image 
                     src={currSrc}
                     alt={currSrc}
-                    layout="fill"
-
-                    className="rounded-sm pointer-events-none overflow-clip relative"
+                    fill={true}
+                    sizes="800px"
+                    className="rounded-sm pointer-events-none overflow-clip relative object-cover"
                 />
             </div>
             <div className="w-1/2 ">

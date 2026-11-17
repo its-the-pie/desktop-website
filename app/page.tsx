@@ -204,7 +204,7 @@ export default function Home () {
       </Tab>
 
 
-      <div className="footer flex flex-row p-2.5">
+      <div className="footer flex flex-row p-2.5 pb-6">
         <div className="flex flex-row gap-8 left-0 w-full app-box items-center text-sm">
           <MenuIcon imageURL={"/message.svg"} i={"intro"} setWidth="36">
             Intro
