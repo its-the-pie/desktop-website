@@ -5,32 +5,14 @@ import Carousel from "./components/Carousel"
 import Clock from './components/Clock.js'
 import DesktopIcon from "./components/desktopIcon";
 import Draggable from "react-draggable";
-import { GetStaticProps } from "next";
-import { getUserProfile, getUserRepositories } from "@/services/github";
 import Image from "next/image";
 import ImageCarousel from "./components/imageCarousel";
 import MenuIcon from "./components/menuIcon";
 import React from 'react';
 import Tab from "./components/tab"
 
-interface Repository {
-  id: number;
-  name: string;
-  description: string;
-  html_url: string;
-}
 
-interface ProfileProps {
-  profile: {
-    avatar_url: string;
-    name: string;
-    bio: string;
-    html_url: string;
-  }
-  repositories: Repository[];
-}
-
-export default function Home() {
+export default function Home () {
 
   return (
     <div className="bg-[url('/bg-def.png')] w-sreen h-screen bg-cover fixed w-full flex justify-center items-center">
@@ -220,6 +202,7 @@ export default function Home() {
       <Tab i="photos" className="text-black bg-white " show=" hidden ">
         <></>
       </Tab>
+
 
       <div className="footer flex flex-row p-2.5">
         <div className="flex flex-row gap-8 left-0 w-full app-box items-center text-sm">
