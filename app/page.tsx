@@ -1,4 +1,3 @@
-'use client'
 
 // imports (alphabetical)
 import Carousel from "./components/Carousel"
@@ -12,7 +11,7 @@ import React from 'react';
 import Tab from "./components/tab"
 
 
-export default function Home () {
+export default async function Home () {
 
   return (
     <div className="bg-[url('/bg-def.png')] w-sreen h-screen bg-cover fixed w-full flex justify-center items-center">
@@ -207,7 +206,7 @@ export default function Home () {
           <p>College is just a side hustle.</p>
           <p>I also sell unicorn themed jewelry which can be found at https://tinyurl.com/unicornjewels</p>
       </Tab>
-      <div className="footer flex flex-row p-2.5 pb-6">
+      <div className="footer flex flex-row p-2.5 pb-4">
         <div className="flex flex-row gap-8 left-0 w-full app-box items-center text-sm">
           <MenuIcon imageURL={"/message.svg"} i={"intro"} setWidth="36">
             Intro
