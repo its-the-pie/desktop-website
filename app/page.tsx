@@ -5,12 +5,30 @@ import Carousel from "./components/Carousel"
 import Clock from './components/Clock.js'
 import DesktopIcon from "./components/desktopIcon";
 import Draggable from "react-draggable";
+import { GetStaticProps } from "next";
+import { getUserProfile, getUserRepositories } from "@/services/github";
 import Image from "next/image";
 import ImageCarousel from "./components/imageCarousel";
 import MenuIcon from "./components/menuIcon";
 import React from 'react';
 import Tab from "./components/tab"
 
+interface Repository {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+}
+
+interface ProfileProps {
+  profile: {
+    avatar_url: string;
+    name: string;
+    bio: string;
+    html_url: string;
+  }
+  repositories: Repository[];
+}
 
 export default function Home() {
 
